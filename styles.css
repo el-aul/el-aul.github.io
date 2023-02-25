@@ -43,11 +43,11 @@ img {
 .text-container {
   z-index: 2;
   margin: 0 1em;
-  position: relative;
   overflow-y: auto;
   height: calc(50vh - 25vh);
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .text {
@@ -63,7 +63,7 @@ img {
   z-index: 2;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
 }
 
@@ -75,19 +75,11 @@ img {
   font-size: 20px;
   padding: 16px;
   user-select: none;
-}
-
-.prev {
-  border-radius: 3px 0 0 3px;
-}
-
-.next {
-  border-radius: 0 3px 3px 0;
+  border-radius: 20px;
 }
 
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
   color: white;
 }
 
