@@ -1,4 +1,4 @@
-let slideIndex = 6;
+let slideIndex = 1;
 
 showSlides(slideIndex);
 
