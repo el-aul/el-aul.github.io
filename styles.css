@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  background: url("bg.jpeg");
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+.heart-container {
+  z-index: 1;
+}
+
+img {
+  z-index: 2;
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+
+.container {
+  z-index: 2;
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid grey;
+  border-radius: 20px;
+}
+
+.text-container {
+  z-index: 2;
+  margin: 0 1em;
+  position: relative;
+  overflow-y: auto;
+  height: calc(50vh - 25vh);
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  color: whitesmoke;
+  display: none;
+  padding: 40px;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.navigation-container {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 16px;
+  user-select: none;
+}
+
+.prev {
+  border-radius: 3px 0 0 3px;
+}
+
+.next {
+  border-radius: 0 3px 3px 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.heart {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  clip-path: path(
+    "M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z"
+  );
+}
+
+.h0 {
+  background: #fcc38d;
+  transform: scale(150);
+  animation: move0 linear 2s 0s infinite;
+}
+
+.h1 {
+  background: #ff5252;
+  transform: scale(90);
+  animation: move1 linear 2s 0s infinite;
+}
+
+.h2 {
+  background: rgb(237, 151, 104);
+  transform: scale(60);
+  animation: move2 linear 2s 0s infinite;
+}
+
+.h3 {
+  background: #fcc38d;
+  transform: scale(40);
+  animation: move3 linear 2s 0s infinite;
+}
+
+.h4 {
+  background: #ff5252;
+  transform: scale(20);
+  animation: move4 linear 2s 0s infinite;
+}
+
+.h5 {
+  background: rgb(237, 151, 104);
+  transform: scale(5);
+  animation: move5 linear 2s 0s infinite;
+}
+
+.h6 {
+  background: #fcc38d;
+  transform: scale(0.1);
+  animation: move6 linear 2s 0s infinite;
+}
+
+@keyframes move0 {
+  to {
+    transform: scale(180);
+    background: rgb(237, 151, 104);
+  }
+}
+
+@keyframes move1 {
+  to {
+    transform: scale(150);
+    background: #fcc38d;
+  }
+}
+
+@keyframes move2 {
+  to {
+    transform: scale(90);
+    background: #ff5252;
+  }
+}
+
+@keyframes move3 {
+  to {
+    transform: scale(60);
+    background: rgb(237, 151, 104);
+  }
+}
+
+@keyframes move4 {
+  to {
+    transform: scale(40);
+    background: #fcc38d;
+  }
+}
+
+@keyframes move5 {
+  to {
+    transform: scale(20);
+    background: #ff5252;
+  }
+}
+
+@keyframes move6 {
+  to {
+    transform: scale(5);
+    background: rgb(237, 151, 104);
+  }
+}
